@@ -14,7 +14,7 @@
         map.addLayer(osm);
 
         // Load kml file
-        fetch('assets/tes.kml')
+        fetch('assets/tes3.kml')
             .then(res => res.text())
             .then(kmltext => {
                 // Create new kml overlay
