@@ -5,6 +5,7 @@ use App\Models\Post;
 use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 use App\Models\Category;
+use App\Models\kml_files;
 use App\Models\User;
 
 
@@ -53,3 +54,6 @@ Route::get('/users', function () {
         'users' => User::all()
     ]);
 });
+
+Route::get('/uploads', [PostController::class, 'upload'])->name('kml.upload');
+

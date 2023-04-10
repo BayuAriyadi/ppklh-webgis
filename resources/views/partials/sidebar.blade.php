@@ -32,6 +32,11 @@
                         <i class='bx bx-expand-horizontal nav_icon'></i>
                         <span class="nav_name">About</span>
                     </a>
+
+                    <a href="/uploads" class="nav_link {{($title  === 'uploads') ? 'active' : ''}}">
+                        <i class='bx bx-upload nav_icon'></i>
+                        <span class="nav_name">Uploads</span>
+                    </a>
                 </div>
             </div>
             <a href="#" class="nav_link">
