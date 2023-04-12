@@ -13,7 +13,7 @@
 
         map.addLayer(osm);
 
-        // Load kml file
+        // Load kml filee
         fetch('assets/tes3.kml')
             .then(res => res.text())
             .then(kmltext => {
