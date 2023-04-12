@@ -18,7 +18,7 @@
                     </a>
                     <a href="/users" class="nav_link {{($title  === 'People') ? 'active' : ''}}">
                         <i class='bx bx-user nav_icon'></i>
-                        <span class="nav_name">Users</span>
+                        <span class="nav_name">Author</span>
                     </a>
                     <a href="/blog" class="nav_link {{($title  === 'Blog') ? 'active' : ''}}">
                         <i class='bx bx-book-content nav_icon'></i>
