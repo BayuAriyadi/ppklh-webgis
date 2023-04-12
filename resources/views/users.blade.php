@@ -8,7 +8,7 @@
         @foreach ($users as $user)
             <div class="col-4 mb-5">
                 <div class="card" style="width: 20rem;">
-                    <img src="{{ $user->image }}" class="card-img-top"  alt="{{ $user->name }}">
+                    <img src="https://source.unsplash.com/random/300x300/?profile" class="card-img-top"  alt="{{ $user->name }}">
 
                     <div class="card-body">
                         <h5 class="card-title">{{ $user->name }}</h5>

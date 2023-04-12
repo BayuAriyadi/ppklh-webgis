@@ -4,7 +4,7 @@
     <article class="mb-5 border-bottom">
         <h1>{{ $post->title }}</h1>
 
-        <p>by: <a href="/User/{{$post->user->name}}" class="text-decoration-none">{{$post->user->name}}</a> in <a href="/Category/{{ $post->category->slug}}" class="text-decoration-none">{{ $post->category->name}}</a></p>
+        <p>by: <a href="/User/{{$post->user->name}}" class="text-decoration-none">{{$post->user->name}}</a> in <a href="/Category/{{ $post->category->name}}" class="text-decoration-none">{{ $post->category->name}}</a></p>
 
         {!! $post->body !!}
 
