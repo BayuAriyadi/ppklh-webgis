@@ -16,7 +16,6 @@
                             class="text-decoration-none">{{ $posts[0]->category->name }}</a>
                         {{ $posts[0]->created_at->diffForHumans() }}
                     </p>
-
                 </small>
                 <p class="card-text">{{ $posts[0]->excerpt }}</p>
 
