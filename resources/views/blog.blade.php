@@ -47,7 +47,6 @@
                                 </p>
                             </small>
                             <p class="card-text">{{ $post->excerpt }}</p>
-
                             <a href="/blog/{{ $post->slug }}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
