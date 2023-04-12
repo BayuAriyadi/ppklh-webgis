@@ -1,7 +1,7 @@
     <header class="header" id="header">
         
-        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i></div>
-
+        <div class="header_toggle flex"><i class='bx bx-menu' id="header-toggle"></i>
+        </div>
         <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
     </header>
     <div class="l-navbar" id="nav-bar">
@@ -31,6 +31,10 @@
                     <a href="/about" class="nav_link {{($title  === 'About') ? 'active' : ''}}">
                         <i class='bx bx-expand-horizontal nav_icon'></i>
                         <span class="nav_name">About</span>
+                    </a>
+                    <a href="/table" class="nav_link {{($title  === 'Tabel') ? 'active' : ''}}">
+                        <i class='bx bx-table nav_icon'></i>
+                        <span class="nav_name">Data</span>
                     </a>
                 </div>
             </div>

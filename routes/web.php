@@ -53,3 +53,11 @@ Route::get('/users', function () {
         'users' => User::all()
     ]);
 });
+
+Route::get('/table', function (Post $posts) {
+    return view('table', [
+        'title' => 'Tabel',
+        'users' => User::all(),
+        'categories' => Category::all()
+    ]);
+});

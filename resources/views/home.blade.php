@@ -4,9 +4,10 @@
     <h1>DINAS LINGKUNGAN HIDUP PROVINSI KALIMANTAN SELATAN</h1>
 
     <div id="map" class="rounded-3 shadow p-3 mb-5 bg-white rounded"></div>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 
     <script type="text/javascript">
-        // Make basemap
+        Make basemap
         var L = window.L;
         const map = new L.Map('map');
         const osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
@@ -27,5 +28,6 @@
                 const bounds = track.getBounds();
                 map.fitBounds(bounds);
             });
+
     </script>
 @endsection
