@@ -9,27 +9,32 @@ use App\Http\Controllers\Controller;
 
 class PostController extends Controller
 {
-    public function home(){
+    public function home()
+    {
         return view('home', [
             'title' => 'Home',
         ]);
     }
 
-    public function index() { 
-            return view('blog', [
-                'title' => 'All Posts',
-                'posts' => Post::latest()->get()
-            ]);
+    public function index()
+    {
+
+        return view('blog', [
+            'title' => 'All Posts',
+            'posts' => Post::latest()->filter()->get()
+        ]);
     }
 
-    public function show(Post $post) {
+    public function show(Post $post)
+    {
         return view('post', [
             'title' => $post->title,
             'post' => $post
         ]);
     }
 
-    public function about() {
+    public function about()
+    {
         return view('about', [
             'title' => 'About',
             'name' => 'Muhammad Bayu Ariyadi',
