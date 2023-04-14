@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('pemantauans', function (Blueprint $table) {
             $table->id();
-            $table->
+            $table->String('lokasi');
+            $table->Float('latitude');
+            $table->Float('longitude');
+            $table->String('data');
             $table->timestamps();
         });
     }

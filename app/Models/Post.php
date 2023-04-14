@@ -13,9 +13,9 @@ class Post extends Model
     protected $guarded = ['id'];
     protected $with = ['category', 'user'];
 
-    public function scopeFilter($query){
+    public function scopeFilter($post){
         if(request('search')){
-            return $query->where('title', 'like', '%' . request('search') . '%')
+            return $post->where('title', 'like', '%' . request('search') . '%')
             ->orWhere('body', 'like', '%' . request('search') . '%');
         }
     }

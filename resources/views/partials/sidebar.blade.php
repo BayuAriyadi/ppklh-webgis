@@ -1,4 +1,4 @@
-    <header class="header" id="header">
+    <header class="header mb-3" id="header">
         
         <div class="header_toggle flex"><i class='bx bx-menu' id="header-toggle"></i>
         </div>
@@ -35,6 +35,10 @@
                     <a href="/table" class="nav_link {{($title  === 'Tabel') ? 'active' : ''}}">
                         <i class='bx bx-table nav_icon'></i>
                         <span class="nav_name">Data</span>
+                    </a>
+                    <a href="/upload" class="nav_link {{($title  === 'Upload') ? 'active' : ''}}">
+                        <i class='bx bx-upload nav_icon'></i>
+                        <span class="nav_name">Upload</span>
                     </a>
                 </div>
             </div>

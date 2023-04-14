@@ -23,6 +23,7 @@ Route::get('/', [PostController::class, 'home']);
 Route::get('/about', [PostController::class, 'about']);
 Route::get('/blog', [PostController::class, 'index']);
 Route::get('/blog/{post:slug}', [PostController::class, 'show']);
+Route::get('/upload', [PostController::class, 'upload']);
 
 Route::get('/Category/{category:name}', function (Category $category) {
     return view('blog', [

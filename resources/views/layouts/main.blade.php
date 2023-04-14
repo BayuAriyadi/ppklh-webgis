@@ -26,7 +26,7 @@
 
     <div class="container mt-4">
         @include('partials.sidebar')
-        <div class=" bg-light">
+        <div class=" bg-light mt-4">
             @yield('container')
         </div>
     </div>

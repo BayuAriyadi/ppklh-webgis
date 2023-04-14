@@ -27,6 +27,5 @@
                 const bounds = track.getBounds();
                 map.fitBounds(bounds);
             });
-
     </script>
 @endsection

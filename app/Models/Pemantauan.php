@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Pemantauan extends Model
 {
     use HasFactory;
+
+    
 }
