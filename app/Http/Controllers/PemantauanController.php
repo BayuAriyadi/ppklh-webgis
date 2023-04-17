@@ -30,7 +30,21 @@ class PemantauanController extends Controller
      */
     public function store(StorePemantauanRequest $request)
     {
-        //
+        $this->validate($request,[
+    		'lokasi' => 'required',
+    		'latitude' => 'required',
+            'longitude' => 'required',
+            'data' => 'required'
+    	]);
+
+        $request = Pemantauan::create([
+            'lokasi' => $request->lokasi,
+            'latitude' => $request->latitude,
+            'longitude' => $request->longitude,
+            'data' => $request->data
+        ]);
+
+        return redirect('/tabel');
     }
 
     /**

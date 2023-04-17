@@ -5,6 +5,7 @@ use App\Models\Post;
 use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 use App\Models\Category;
+use App\Models\Pemantauan;
 use App\Models\User;
 
 
@@ -24,39 +25,8 @@ Route::get('/about', [PostController::class, 'about']);
 Route::get('/blog', [PostController::class, 'index']);
 Route::get('/blog/{post:slug}', [PostController::class, 'show']);
 Route::get('/upload', [PostController::class, 'upload']);
-
-Route::get('/Category/{category:name}', function (Category $category) {
-    return view('blog', [
-        'title' => "Post by Category : $category->name",
-        'posts' => $category->posts->load('user', 'category'),
-    ]);
-});
-
-Route::get('/categories', function () {
-    return view('categories', [
-        'title' => 'Post Categories',
-        'categories' => Category::all()
-    ]);
-});
-
-Route::get('/User/{user:name}', function (User $user) {
-    return view('blog', [
-        'title' => "Post by Author : $user->name",
-        'posts' => $user->posts->load('category', 'user')
-    ]);
-});
-
-Route::get('/users', function () {
-    return view('users', [
-        'title' => 'People',
-        'users' => User::all()
-    ]);
-});
-
-Route::get('/table', function (Post $posts) {
-    return view('table', [
-        'title' => 'Tabel',
-        'users' => User::all(),
-        'categories' => Category::all()
-    ]);
-});
+Route::get('/table', [PostController::class, 'table']);
+Route::get('/Category/{category:name}', [PostController::class, 'category']);
+Route::get('/categories', [PostController::class, 'categories']);
+Route::get('/User/{user:name}', [PostController::class, 'user']);
+Route::get('/users', [PostController::class, 'users']);
